@@ -71,6 +71,7 @@ exports.formularioEditar = async (req, res) => {
 
     // render a la vista 
     res.render('nuevoProyecto', {
-        nombrePagina : 'Editar Proyecto'
+        nombrePagina : 'Editar Proyecto',
+        proyectos
     }); 
 }
