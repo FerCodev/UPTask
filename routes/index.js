@@ -17,8 +17,15 @@ router.post('/nuevo-proyecto',
     body('nombre').not().isEmpty().trim().escape(),
     proyectosController.nuevoProyecto
 );
+    //Listar Proyectos
     router.get('/proyectos/:url', proyectosController.proyectoPorUrl);
+    
+    //Actualizar el proyecto
+    router.get('/proyecto/editar/:id', 
+    proyectosController.formularioEditar);
+    
     return router;
+    
 }
 
 
