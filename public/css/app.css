@@ -81,7 +81,7 @@ body {
     font-weight: 900;
     min-width: 250px;
     margin:0  auto;
-
+    border-radius: 10px;
     display: flex;
     align-items: center;
     line-height: 0;
