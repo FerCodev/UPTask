@@ -201,6 +201,7 @@ body.index {
     padding: 2rem;
     color: white;
     transition: background-color .5s ease-in-out;
+    border-radius: 10px;
 }
 
 /** Listado Pendientes **/
@@ -288,6 +289,7 @@ form.agregar-proyecto {
     padding: 2rem;
     color: white;
     transition: background-color .5s ease-in-out;
+    border-radius: 10px;
 }
 form.agregar-proyecto label,
 form.agregar-proyecto input {
