@@ -33,10 +33,18 @@ if(btnEliminar){
                                 'exito!'
                             );
                             //redireccionar al inicio
-                            //setTimeout(() =>{
-                            //    window.location.href = '/'
-                            //}, 3000)
-                    });
+                            setTimeout(() =>{
+                                window.location.href = '/'
+                            }, 3000)
+                    })
+                    .catch(( ) => {
+                        Swal.fire({
+                            icon: 'error',
+                            type: 'error',
+                            title: 'hubo un error',
+                            text: 'no se pudo borrar el proyecto'
+                        })
+                    })
             }
         })
     })
