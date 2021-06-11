@@ -9,6 +9,7 @@ const proyectosController = require
 ('../controllers/proyectosController');
 // Controlador de las tareas
 const tareasController = require('../controllers/tareasController');
+const usuariosController = require('../controllers/usuariosController');
 
 
 
@@ -45,6 +46,9 @@ router.post('/nuevo-proyecto',
     //Eliminar Tarea
     router.delete('/tareas/:id', 
     tareasController.eliminarTarea);
+    
+    //Crear nueva cuenta 
+    router.get('/crear-cuenta', usuariosController.formCrearCuenta)
     
     return router;
     
