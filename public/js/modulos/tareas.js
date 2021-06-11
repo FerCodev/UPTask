@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const tareas = document.querySelector('.listado-pendientes')
 
 if(tareas){
@@ -8,7 +10,12 @@ if(tareas){
             // Si no funciona, agragar otro parentElement
             const idTarea = icono.parentElement.dataset.tarea;
         
-            console.log(idTarea)
+            //Request hacia /tareas/:id
+            const url = `${location.origin}/tareas/${idTarea}`;
+            axios.patch(url, { idTarea })
+            .then(function(respuesta){
+                console.log(respuesta)
+            })
         }
     })
 }
