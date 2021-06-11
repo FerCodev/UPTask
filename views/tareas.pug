@@ -26,8 +26,15 @@ block contenido
               else
                 p No hay tareas en este proyecto
         //pre= vardump(tareas)
+
+        //Avance del Proyecto 
+        .avance
+            h2 Avance del Proyecyo
+            #barra-avance.barra-avance
+                #porcentaje.porcentaje
         
         // Acciones que se puden realizar
         .contenedor-acciones 
             a(href=`/proyecto/editar/${proyecto.id}` class="boton") Editar Proyecto
-            button#eliminar-proyecto(data-proyecto-url=proyecto.url type="button" class="boton eliminar") Eliminar Proyecto 
+            button#eliminar-proyecto(data-proyecto-url=proyecto.url
+            type="button" class="boton eliminar") Eliminar Proyecto 
