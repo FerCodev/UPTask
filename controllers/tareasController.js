@@ -50,5 +50,5 @@ exports.eliminarTarea = async (req, res) =>{
     })
     if(!resultado) return next();
 
-    res.status(200).send('Eliminando...')
+    res.status(200).send('andate a la concha de tu hermana')
 }
