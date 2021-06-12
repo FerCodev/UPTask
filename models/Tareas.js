@@ -8,7 +8,17 @@ const Tareas = db.define('tareas', {
         primaryKey: true,
         autoIncrement: true
     },
-    tarea: Sequelize.STRING(100),
+    tarea: {
+        type: Sequelize.STRING(100),
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: 'la tarea no puede ir vacia'
+            }
+        }
+        
+    },
+
     estado: Sequelize.INTEGER(1)
 });
 Tareas.belongsTo(Proyectos, {

@@ -69,7 +69,7 @@ app.use(passport.session())
 // pasar vardump a la app 
 app.use((req, res, next) => {
     res.locals.vardump = helpers.vardump;
-    res.locals.mensajes = req.flash()
+    res.locals.mensajes = req.flash();
     next();
 });
 

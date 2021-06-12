@@ -10,6 +10,7 @@ const proyectosController = require
 // Controlador de las tareas
 const tareasController = require('../controllers/tareasController');
 const usuariosController = require('../controllers/usuariosController');
+const authController = require('../controllers/authController')
 
 
 
@@ -51,6 +52,11 @@ router.post('/nuevo-proyecto',
     router.get('/crear-cuenta', usuariosController.formCrearCuenta)
     router.post('/crear-cuenta', usuariosController.crearCuenta)
     
+    //iniciar sesion
+    router.get('/iniciar-sesion', usuariosController.formIniciarSesion);
+    router.post('/iniciar-sesion', authController.autenticarUsuario);
+
+
     return router;
     
 }

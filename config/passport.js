@@ -14,7 +14,7 @@ passport.use(
         },
         async (email, password, done) => {
             try {
-                const usurio = await Usuarios.find({
+                const usuario = await Usuarios.findOne({
                     where: {
                         email: email
                     }
@@ -47,4 +47,4 @@ passport.deserializeUser((usuario, callback) => {
     callback(null, usuario)
 })
 
-module.exports = passport
+module.exports = passport;
