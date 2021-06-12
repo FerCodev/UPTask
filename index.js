@@ -58,7 +58,7 @@ app.use(cookieParser())
 //las sesiones nos permiten navegar por
 //distintas paginas sin tener que volvernos a autenticar
 app.use(session({
-    secret: 'supersecreto',
+    secret: 'keyboard cat',
     resave: false,
     saveUninitialized: false
 }))
