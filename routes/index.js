@@ -91,7 +91,10 @@ module.exports = function() {
         authController.enviarToken
     )
     router.get('/reestablecer/:token', 
-        authController.resetPassword
+        authController.validarToken
+    )
+    router.post('/restablecer/:token',
+        authController.actualizarPassword
     )
 
     return router;
