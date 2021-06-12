@@ -3,7 +3,7 @@ const slug = require('slug');
 const Tareas = require('../models/Tareas')
 
 exports.proyectosHome = async(req, res) => {
-    console.log(res.locals.usuario);
+    //console.log(res.locals.usuario.email);
 
     const proyectos = await Proyectos.findAll();
 
@@ -43,8 +43,10 @@ exports.nuevoProyecto = async (req, res) =>{
     } else {
         //no hay errores 
         //Insertar en la BD
-        const url = slug(nombre).toLowerCase()
-        const proyecto = await Proyectos.create({ nombre, url });
+        const usuarioId = res.locals.usuario.id;
+        await Proyectos.create({ nombre, usuarioId });
+        //const url = slug(nombre).toLowerCase()
+        //const proyecto = await Proyectos.create({ nombre, url });
         res.redirect('/');      
     }
 }
