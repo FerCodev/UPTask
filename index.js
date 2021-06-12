@@ -13,6 +13,7 @@ const expressValidator = require('express-validator');
 const flash = require('connect-flash')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
+const passport = require('./config/passport')
 
 //importamos helpers de forma global 
 const helpers = require('./helpers')
@@ -61,6 +62,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 // pasar vardump a la app 
 app.use((req, res, next) => {

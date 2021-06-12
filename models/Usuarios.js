@@ -44,6 +44,10 @@ const Usuarios = db.define('usuarios', {
 });
 //al poner hasMany me tira error
 //Usuarios.hasMany(Proyectos)
+//metodos personalizados
+Usuarios.prototype.verificarPassword = function(password){
+    return bcrypt.compareSync(password, this.password)
+}
 
 module.exports = Usuarios;
 
