@@ -23,5 +23,6 @@ const Proyectos = db.define('proyectos', {
         }
     }
 });
+//Proyectos.hasMany(Tareas);
 
 module.exports = Proyectos;

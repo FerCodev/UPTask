@@ -11,6 +11,8 @@ const Tareas = db.define('tareas', {
     tarea: Sequelize.STRING(100),
     estado: Sequelize.INTEGER(1)
 });
-Tareas.belongsTo(Proyectos);
+Tareas.belongsTo(Proyectos, {
+    onDelete: 'CASCADE'
+});
 
 module.exports = Tareas;

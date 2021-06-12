@@ -25,7 +25,7 @@ const Usuarios = db.define('usuarios', {
         }
     }
 });
-
+//al poner hasMany me tira error
 //Usuarios.hasMany(Proyectos)
 
 module.exports = Usuarios;
