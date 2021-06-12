@@ -83,6 +83,14 @@ module.exports = function() {
         authController.cerrarSesion
     )
 
+    //reestablecer contrasenas
+    router.get('/reestablecer', 
+        usuariosController.formReestablecerPassword
+    )
+    router.post('/reestablecer', 
+        usuariosController.formReestablecerPassword
+    )
+
     return router;
     
 }
